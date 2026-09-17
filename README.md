@@ -1,4 +1,4 @@
-# SmartUniversityAssistant
+# MIT RAG Assistant
 
 An AI-powered university assistant that answers questions about MIT university information using Retrieval-Augmented Generation (RAG).
 
@@ -10,7 +10,7 @@ The system retrieves relevant information from a processed university document c
 
 University information is distributed across many web pages and documents, making it difficult for students to quickly find accurate answers.
 
-SmartUniversityAssistant provides a conversational interface where users can ask questions about university-related information.
+MIT RAG Assistant provides a conversational interface where users can ask questions about university-related information.
 
 The system follows a RAG architecture:
 
@@ -78,17 +78,7 @@ Grounded Answer + Sources
 ## Project Structure
 
 ```text
-SmartUniversityAssistant/
-|
-├── notebooks/
-│   ├── collecting_data.ipynb
-│   ├── document_processing.ipynb
-│   └── rag_pipeline.ipynb
-|
-├── data/
-│   ├── raw/
-│   └── processed/
-│       └── documents/
+MIT-RAG-Assistant/
 |
 ├── backend/
 │   ├── app/
@@ -131,25 +121,15 @@ SmartUniversityAssistant/
 └── .gitignore
 ```
 
+> **Important:** The application requires the persisted ChromaDB vector store. Download the `vector_store` folder from the [Google Drive dataset](https://drive.google.com/drive/folders/1AHPjIn3JEx-8EqtkMxOAOkghDm1UJlAE?usp=drive_link) and place it at `backend/data/vector_store/`. You do **not** need to download the full raw or processed dataset to run the application.
+
 ---
 
 # Data
 
 The project uses university-related documents collected from MIT university web pages.
 
-The document processing pipeline converts the collected source material into structured JSON documents containing information such as:
-
-- Document title
-- Source URL
-- Document type
-- Pages
-- Sections
-- Headings
-- Paragraphs
-- Tables
-- Metadata
-
-The document processing stage produced approximately:
+The document processing pipeline produced approximately:
 
 - **1,264 processed documents**
 - **2,143 pages**
@@ -166,12 +146,17 @@ After document processing, the RAG pipeline identified **1,142 usable documents*
 
 ## Dataset / Processed Data
 
-The complete collected and processed dataset is available through Google Drive:
+The complete collected and processed data is available through:
 
-**Google Drive:**  
-`[PUT YOUR GOOGLE DRIVE LINK HERE]`
+**[Google Drive](https://drive.google.com/drive/folders/1AHPjIn3JEx-8EqtkMxOAOkghDm1UJlAE?usp=drive_link)**
 
-Replace the placeholder above with the actual Google Drive link.
+For running the application, only the persisted `vector_store` is required. Download it from the Google Drive folder and place it at:
+
+```text
+backend/data/vector_store/
+```
+
+The full raw and processed dataset is not required to run the backend and frontend.
 
 ---
 
@@ -377,7 +362,7 @@ The frontend communicates with the FastAPI backend through the `API_BASE_URL` en
 
 ```bash
 git clone YOUR_GITHUB_REPOSITORY_URL
-cd SmartUniversityAssistant
+cd MIT RAG Assistant
 ```
 
 ---
@@ -604,7 +589,7 @@ The final question is intentionally outside the university corpus and can be use
 
 # Grounding and Hallucination Prevention
 
-A key design goal of SmartUniversityAssistant is to reduce unsupported answers.
+A key design goal of MIT RAG Assistant is to reduce unsupported answers.
 
 The generation prompt instructs the LLM to use only the retrieved context.
 
@@ -660,17 +645,3 @@ Possible future improvements include:
 - Documentation
 
 ---
-
-# License
-
-This project was developed as a graduation project.
-
-Add the appropriate license here if the project is released under a specific open-source license.
-
----
-
-# Authors
-
-**SmartUniversityAssistant Team**
-
-Graduation Project
