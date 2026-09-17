@@ -169,7 +169,7 @@ After document processing, the RAG pipeline identified **1,142 usable documents*
 The complete collected and processed dataset is available through Google Drive:
 
 **Google Drive:**  
-`[PUT YOUR GOOGLE DRIVE LINK HERE]`
+`[https://drive.google.com/drive/folders/1AHPjIn3JEx-8EqtkMxOAOkghDm1UJlAE?usp=drive_link]`
 
 Replace the placeholder above with the actual Google Drive link.
 
