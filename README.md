@@ -148,7 +148,7 @@ After document processing, the RAG pipeline identified **1,142 usable documents*
 
 The complete collected and processed data is available through:
 
-**[Google Drive](https://drive.google.com/drive/folders/1AHPjIn3JEx-8EqtkMxOAOkghDm1UJlAE?usp=drive_link)**
+**Google Drive:** [Dataset & Processed Data](https://drive.google.com/drive/folders/1AHPjIn3JEx-8EqtkMxOAOkghDm1UJlAE?usp=drive_link)
 
 For running the application, only the persisted `vector_store` is required. Download it from the Google Drive folder and place it at:
 
